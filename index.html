@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerencia regional de transportes y comunicaciones de loreto</title>
+  <meta name="description" content="Sitio oficial de la Gerencia Regional de Transportes y Comunicaciones de Loreto">
+
+  <!-- Favicon y logo para Google -->
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/sQN8fzJ3/LOGO-WEB.png">
+  
+  <!-- Datos estructurados para Google -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GovernmentOrganization",
+      "name": "Gerencia Regional de Transportes y Comunicaciones de Loreto",
+      "url": "https://grtcloreto.gob.pe",
+      "logo": "https://i.postimg.cc/sQN8fzJ3/LOGO-WEB.png",
+      "description": "Sitio oficial de la Gerencia Regional de Transportes y Comunicaciones de Loreto"
+    }
+  </script>
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="GRTC Loreto - Gerencia Regional de Transportes y Comunicaciones">
+  <meta property="og:description" content="Sitio oficial de la Gerencia Regional de Transportes y Comunicaciones de Loreto">
+  <meta property="og:image" content="https://i.postimg.cc/sQN8fzJ3/LOGO-WEB.png">
+  <meta property="og:url" content="https://grtcloreto.gob.pe">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GRTC Loreto">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GRTC Loreto - Gerencia Regional de Transportes y Comunicaciones">
+  <meta name="twitter:description" content="Sitio oficial de la Gerencia Regional de Transportes y Comunicaciones de Loreto">
+  <meta name="twitter:image" content="https://i.postimg.cc/sQN8fzJ3/LOGO-WEB.png">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    /* Estilos generales */
+    :root {
+      --primary: #003087;
+      --secondary: #f70808;
+      --accent: #ffcc00;
+      --light: #f5f5f5;
+      --dark: #222;
+      --text: #333;
+      --text-light: #777;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--light);
+      overflow-x: hidden;
+      position: relative;
+    }
+    
+    /* Fondo animado interactivo */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      opacity: 0.1;
+      background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+      background-size: 300% 300%;
+      animation: gradientBG 15s ease infinite;
+    }
+    
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    /* Botones mejorados con efectos */
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: var(--secondary);
+      color: white;
+      border-radius: 50px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(247, 8, 8, 0.3);
+      transform: translateY(0);
+    }
+    
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .btn:hover {
+      background: #c50000;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(247, 8, 8, 0.4);
+    }
+    
+    .btn:hover::before {
+      left: 100%;
+    }
+    
+    .btn-primary {
+      background: var(--primary);
+      box-shadow: 0 5px 15px rgba(0, 48, 135, 0.3);
+    }
+    
+    .btn-primary:hover {
+      background: #002366;
+      box-shadow: 0 10px 25px rgba(0, 48, 135, 0.4);
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+      color: var(--primary);
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+    
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #f30606 100%);
+      padding: 15px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 1000;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .logo-img {
+      height: 80px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .logo-img:hover {
+      transform: scale(1.05) rotate(-5deg);
+    }
+    
+    .logo-text {
+      color: white;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .logo-text p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    
+    .partner-logos {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    
+    .partner-logo {
+      height: 50px;
+      filter: brightness(0) invert(1);
+      opacity: 0.8;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .partner-logo:hover {
+      opacity: 1;
+      transform: scale(1.1) rotate(5deg);
+    }
+    
+    /* Menú de navegación - Estilo premium */
+    nav {
+      background: transparent;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      padding: 15px 0;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      gap: 10px;
+    }
+    
+    /* Estilo premium para botones del menú */
+    .nav-button {
+      background: linear-gradient(to right, var(--secondary), #c50000);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 5px 15px rgba(247, 8, 8, 0.3);
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .nav-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .nav-button:hover {
+      background: linear-gradient(to right, #c50000, #a00000);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(247, 8, 8, 0.4);
+    }
+    
+    .nav-button:hover::before {
+      left: 100%;
+    }
+    
+    /* Dropdown premium */
+    .dropdown-container {
+      position: relative;
+    }
+    
+    .dropdown-content {
+      position: absolute;
+      background: rgba(197, 0, 0, 0.95);
+      min-width: 280px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      border-radius: 15px;
+      z-index: 1000;
+      display: none;
+      top: 100%;
+      left: 0;
+      padding: 10px 0;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+      transform-origin: top center;
+      transform: scaleY(0);
+      transition: transform 0.3s ease, opacity 0.2s ease;
+      opacity: 0;
+    }
+    
+    .dropdown-container:hover .dropdown-content,
+    .dropdown-container:focus-within .dropdown-content,
+    .dropdown-container.active .dropdown-content {
+      display: block;
+      transform: scaleY(1);
+      opacity: 1;
+    }
+    
+    .dropdown-content a {
+      color: white;
+      padding: 12px 25px;
+      display: block;
+      transition: all 0.3s;
+      position: relative;
+    }
+    
+    .dropdown-content a::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 5px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+    
+    .dropdown-content a:hover {
+      background: rgba(255,255,255,0.1);
+      padding-left: 35px;
+    }
+    
+    .dropdown-content a:hover::before {
+      opacity: 1;
+      left: 20px;
+    }
+    
+    /* Menú móvil */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+      padding: 10px;
+      transition: all 0.3s;
+      z-index: 1001;
+    }
+    
+    .mobile-menu-btn:hover {
+      transform: rotate(90deg);
+    }
+    
+    /* Slider premium */
+    #slider-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    #slider {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      max-height: 700px;
+      overflow: hidden;
+    }
+    
+    #slider img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      object-fit: cover;
+      filter: brightness(0.7);
+      transform: scale(1);
+      transition: all 1.5s ease-in-out;
+    }
+    
+    #slider img.active {
+      opacity: 1;
+      transform: scale(1.05);
+      filter: brightness(0.8);
+    }
+    
+    .hero {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 10;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      color: white;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255,255,255,0.1);
+      transform: translateY(20px);
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards 0.5s;
+    }
+    
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      line-height: 1.4;
+    }
+    
+    /* Sección de integridad premium */
+    .custom-center-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 20px;
+      background-color: rgba(249, 249, 249, 0.9);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .custom-center-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.postimg.cc/zGgt50s6/logo-portal-web.jpg') center/cover no-repeat;
+      opacity: 0.05;
+      z-index: -1;
+    }
+    
+    .custom-center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+    }
+    
+    .service-card {
+      width: 350px;
+      padding: 30px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      transition: all 0.3s;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+    
+    .service-card:hover::before {
+      height: 10px;
+    }
+    
+    .service-icon {
+      font-size: 3.5rem;
+      color: var(--secondary);
+      margin-bottom: 20px;
+      transition: all 0.3s;
+    }
+    
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+      color: var(--primary);
+    }
+    
+    /* Servicios premium */
+    .services {
+      padding: 100px 0;
+      background: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .services::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.postimg.cc/7h6JHM45/portal-web-5.jpg') center/cover no-repeat;
+      opacity: 0.05;
+      z-index: -1;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .services .service-card {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(5px);
+      transform: perspective(1000px) rotateY(0deg);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .services .service-card:hover {
+      transform: perspective(1000px) rotateY(10deg) translateY(-10px);
+      box-shadow: 15px 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .services .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .services .service-card h3::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--secondary);
+      transition: width 0.3s ease;
+    }
+    
+    .services .service-card:hover h3::after {
+      width: 100%;
+    }
+    
+    /* Noticias premium */
+    .news {
+      padding: 100px 0;
+      background: #f9f9f9;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .news::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.postimg.cc/3xRhtSB4/portal-web-7.jpg') center/cover no-repeat;
+      opacity: 0.05;
+      z-index: -1;
+    }
+    
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+    
+    .news-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      transform: translateY(0);
+    }
+    
+    .news-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.7));
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .news-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+    
+    .news-card:hover::before {
+      opacity: 1;
+    }
+    
+    .news-img {
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .news-card:hover .news-img {
+      transform: scale(1.1);
+    }
+    
+    .news-content {
+      padding: 25px;
+      position: relative;
+      z-index: 2;
+      background: white;
+      transition: all 0.3s;
+    }
+    
+    .news-card:hover .news-content {
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(5px);
+    }
+    
+    .news-date {
+      display: block;
+      color: var(--secondary);
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+    
+    .news-card:hover .news-date {
+      transform: translateX(5px);
+    }
+    
+    .news-card h3 {
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-size: 1.4rem;
+      transition: all 0.3s;
+    }
+    
+    .news-card:hover h3 {
+      color: var(--secondary);
+    }
+    
+    /* Videos premium */
+    .mis-videos {
+      width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding: 100px 0;
+      background: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .mis-videos::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.postimg.cc/Qdx8RxXM/portal-web-6.jpg') center/cover no-repeat;
+      opacity: 0.05;
+      z-index: -1;
+    }
+
+    .fila-videos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+    }
+
+    .video-box {
+      flex: 0 0 calc(33.333% - 30px);
+      max-width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      background: #fff;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+    }
+    
+    .video-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 1;
+    }
+    
+    .video-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+    
+    .video-box:hover::before {
+      opacity: 0.2;
+    }
+
+    .video-box iframe {
+      width: 100%;
+      height: 250px;
+      border: none;
+      display: block;
+    }
+    
+    /* Footer premium */
+    footer {
+      background: linear-gradient(135deg, var(--primary) 0%, #002366 100%);
+      color: white;
+      padding: 100px 0 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.postimg.cc/prTd5bLq/logos-nuevo-2.png') center/contain no-repeat;
+      opacity: 0.05;
+      z-index: 0;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .footer-col h3 {
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .footer-col h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 3px;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 20px;
+    }
+    
+    .footer-links li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--secondary);
+      transition: all 0.3s;
+    }
+    
+    .footer-links li:hover::before {
+      transform: translateX(5px);
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: all 0.3s;
+      display: inline-block;
+      padding: 5px 0;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+      transform: translateX(10px);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+    }
+    
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .social-links a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .social-links a:hover {
+      background: var(--secondary);
+      transform: translateY(-5px) rotate(10deg);
+      box-shadow: 0 5px 15px rgba(247, 8, 8, 0.3);
+    }
+    
+    .social-links a:hover::before {
+      left: 100%;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #aaa;
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Animaciones */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .animate-pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    /* Responsive */
+    @media (max-width: 1200px) {
+      #slider {
+        height: 70vh;
+      }
+      
+      .video-box {
+        flex: 0 0 calc(50% - 30px);
+      }
+      
+      .section-title {
+        font-size: 2.2rem;
+      }
+    }
+    
+    @media (max-width: 992px) {
+      #slider {
+        height: 60vh;
+      }
+      
+      .hero p {
+        font-size: 1.3rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .news-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .header-container {
+        justify-content: center;
+      }
+      
+      .logo {
+        margin-bottom: 15px;
+        justify-content: center;
+        width: 100%;
+      }
+      
+      .partner-logos {
+        justify-content: center;
+        width: 100%;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .nav-container {
+        flex-direction: column;
+        position: fixed;
+        top: 130px;
+        left: 0;
+        width: 100%;
+        background: var(--secondary);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+      }
+      
+      .nav-container.active {
+        max-height: 1000px;
+      }
+      
+      .nav-button {
+        width: 100%;
+        border-radius: 0;
+        text-align: left;
+        padding: 15px 20px;
+        background: var(--secondary);
+        box-shadow: none;
+      }
+      
+      .dropdown-container {
+        width: 100%;
+      }
+      
+      .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        display: none;
+        background: rgba(0,0,0,0.1);
+        transform: none;
+        opacity: 1;
+      }
+      
+      .dropdown-container.active .dropdown-content {
+        display: block;
+      }
+      
+      #slider {
+        height: 50vh;
+      }
+      
+      .hero-content {
+        padding: 20px;
+        margin: 0 15px;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .video-box {
+        flex: 0 0 100%;
+      }
+      
+      .video-box iframe {
+        height: 300px;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .logo {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      #slider {
+        height: 40vh;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .service-card, .news-card {
+        padding: 20px 15px;
+      }
+      
+      .video-box iframe {
+        height: 250px;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .section-title {
+        font-size: 1.6rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      #slider {
+        height: 35vh;
+      }
+      
+      .logo-text h1 {
+        font-size: 1.3rem;
+      }
+      
+      .partner-logo {
+        height: 40px;
+      }
+      
+      .video-box iframe {
+        height: 200px;
+      }
+      
+      .section-title {
+        font-size: 1.4rem;
+      }
+    }
+
+    /* Contenedor para mostrar en horizontal */
+    .horizontal-section {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 2rem 0;
+    }
+
+    .custom-center-container {
+      flex: 1 1 300px;
+      max-width: 400px;
+    }
+
+    /* Videos premium */
+    .video-thumbnail {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .video-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(0,0,0,0.6);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('https://img.icons8.com/ios-filled/50/ffffff/play--v1.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 50%;
+      transition: background-color 0.3s ease;
+    }
+
+    .video-box:hover .play-button {
+      background-color: rgba(255,0,0,0.7);
+    }
+
+    /* Estilo para el botón de noticias */
+    .btn-wrapper {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    /* Estilo para la imagen de fiestas patrias */
+    .responsive-img {
+      max-width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+      cursor: zoom-in;
+    }
+
+    .responsive-img:hover {
+      transform: scale(1.1);
+    }
+
+    .image-container {
+      max-width: 100px;
+      margin: auto;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fondo animado interactivo -->
+  <div class="animated-bg"></div>
+  <div id="particles-js"></div>
+  
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="https://i.postimg.cc/Gh0rYctW/LOGO-WEB-2025.png" alt="GRTC Loreto" class="logo-img animate__animated animate__fadeIn">
+        <div class="logo-text">
+          <h1>¡Felices Fiestas Patrias!</h1>
+          <p>Les desea la Gerencia Regional de Transportes y Comunicaciones</p>
+        </div>
+      </div>
+
+      <!-- Imagen de fiestas patrias -->
+      <div class="image-container">
+        <a href="" target=""><img src="https://i.postimg.cc/76YKHLQ9/pngwing-com-2.png" 
+            alt="pngwing-com-2" 
+            class="responsive-img"
+          />
+        </a>
+      </div>
+      
+      <div class="partner-logos">
+        <a href="https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=18822#.Y_fJdnbMK71" target="_blank">
+          <img src="https://i.postimg.cc/FFMjyNdd/logo-portal-pte.png" alt="Portal de Transparencia" class="partner-logo animate__animated animate__fadeIn animate__delay-1s">
+        </a>
+        <a href="https://www.gob.pe/regionloreto-grtc" target="_blank">
+          <img src="https://i.postimg.cc/B6wC9FnM/logo-gobpe-blanco.png" alt="Gobierno del Perú" class="partner-logo animate__animated animate__fadeIn animate__delay-1s">
+        </a>
+      </div>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Navegación con estilo premium -->
+  <div class="fondo-rojo">
+    <nav>
+      <div class="container nav-container" id="navContainer">
+        <div class="dropdown-container">
+          <button class="nav-button animate__animated animate__fadeInDown animate__delay-1s">NOSOTROS</button>
+          <div class="dropdown-content">
+            <a href="mision.vision.grtcloreto.html">Misión y visión</a>
+            <a href="organigrama.grtcloreto.html">Orgánigrama</a>
+            <a href="#">Directorio de funcionarios</a>
+          </div>
+        </div>
+        
+        <div class="dropdown-container">
+          <button class="nav-button animate__animated animate__fadeInDown animate__delay-1s" id="direccionesBtn">DIRECCIONES EJECUTIVAS</button>
+          <div class="dropdown-content" id="direccionesContent">
+            <a href="direccion.ejecutiva.de.comunicaciones.grtcloreto.html">Dirección Ejecutiva de Comunicaciones</a>
+            <a href="direccion.ejecutiva.de.circulacion.terrestre.grtcloreto.html">Dirección Ejecutiva de Circulación Terrestre</a>
+            <a href="direccion.ejecutiva.de.transportes.acuatico.grtcloreto.html">Dirección Ejecutiva de Transportes Acuático</a>
+            <a href="direccion.ejecutiva.de.infraestructura.vial.grtcloreto.html">Dirección Ejecutiva de Infraestructura Vial</a>
+          </div>
+        </div>
+        
+        <div class="dropdown-container">
+          <button class="nav-button animate__animated animate__fadeInDown animate__delay-1s">TRABAJA CON NOSOTROS</button>
+          <div class="dropdown-content">
+            <a href="convocatoria.cas.2025.html">CONVOCATORIA CAS GRTC LORETO 2025</a>
+          </div>
+        </div>
+        
+        <div class="dropdown-container">
+          <button class="nav-button animate__animated animate__fadeInDown animate__delay-1s">INSTRUMENTOS DE GESTIÓN</button>
+          <div class="dropdown-content">
+            <a href="resoluciones.grtcloreto.html">RESOLUCIONES</a>
+            <a href="manual.de.operaciones(mop)grtcloreto.html">MANUAL DE ORGANIZACIONES Y FUNCIONES (MOP)</a>
+            <a href="reglamento.de.organizacion.funciones(mof)grtcloreto.html">REGLAMENTO DE ORGANIZACIÓN Y FUNCIONES (ROF)</a>
+            <a href="decreto.regional(mop)grtcloreto.html">DECRETO REGIONAL, MANUAL DE OPERACIONES (MOP) Y ORGANIGRAMA</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Slider premium -->
+    <div id="slider-container">
+      <div id="slider">
+        <img src="https://i.postimg.cc/zGgt50s6/logo-portal-web.jpg" class="active">
+        <img src="https://i.postimg.cc/hvtvc6fR/portal-2-de-presentacion.jpg">
+        <img src="https://i.postimg.cc/zGgt50s6/logo-portal-web.jpg">
+        <img src="https://i.postimg.cc/7h6JHM45/portal-web-5.jpg" alt="portal-web-5">
+        <img src="https://i.postimg.cc/Qdx8RxXM/portal-web-6.jpg" alt="portal-web-6">
+        <img src="https://i.postimg.cc/3xRhtSB4/portal-web-7.jpg" alt="portal-web-7">
+        <img src="https://i.postimg.cc/3WMCzj4y/foto-patria.jpg" alt="portal-web-8">
+        <img src="https://i.postimg.cc/SKfFbxzf/fiestas-patrias-7.jpg" alt="portal-web-9">
+        <img src="https://i.postimg.cc/PrdB1wNb/foto-patria-9.jpg" alt="portal-web-10">
+      </div>
+    </div>
+  </div>
+
+  <section class="services"> 
+    <div class="container">
+      <h2 class="section-title animate__animated animate__fadeIn">
+        Gerencia Regional de Transportes y Comunicaciones de Loreto
+      </h2>
+      
+
+      <!-- Contenedor para mostrar en horizontal -->
+      <section class="horizontal-section">
+        <!-- Primer bloque -->
+        <div class="custom-center-container">
+          <div class="service-card animate__animated animate__fadeIn">
+            <div class="service-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Integridad Institucional</h3>
+            <p>Promovemos la transparencia y ética en todas nuestras acciones y procesos institucionales.</p>
+            <a href="#" class="btn btn-primary animate-pulse">Más información</a>
+          </div>
+        </div>
+
+        <!-- Segundo bloque -->
+        <div class="custom-center-container">
+          <div class="service-card animate__animated animate__fadeIn">
+            <div class="service-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Acceso a la Información</h3>
+            <p>
+              Aquí podrás realizar tus pedidos de acceso a la información pública, también encontrarás el formato de solicitud si prefieres presentarlo en físico.
+            </p>
+            
+            <!-- Botón de descarga -->
+            <a href="https://docs.google.com/document/d/1Q0TVqRHKaCg6J5RJYumtAi53aiTb_KJo/export?format=docx" 
+               class="btn btn-outline-primary" 
+               style="margin-bottom: 10px;" 
+               target="_blank">
+              Descargar formato
+            </a>
+
+            <!-- Botón principal -->
+            <a href="https://www.transparencia.gob.pe/reportes_directos/pep_transparencia_acceso_informacion.aspx?id_entidad=18822&id_tema=49&cod_rueep=0&ver=" 
+               class="btn btn-primary animate-pulse">
+              Acceder
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+  
+  <!-- Servicios premium -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title animate__animated animate__fadeIn">Orientación, Trámites y servicios</h2>
+      
+      <div class="services-grid">
+        <div class="service-card animate__animated animate__fadeInUp">
+          <div class="service-icon">
+            <i class="fas fa-car"></i>
+          </div>
+          <h3>Escuela de Conductores</h3>
+          <p>Capacitación profesional para obtener tu licencia de conducir con los más altos estándares de calidad.</p>
+          <a href="escuela.de.conductores.html" class="btn">Más información</a>
+        </div>
+        
+        <div class="service-card animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="service-icon">
+            <i class="fas fa-hospital"></i>
+          </div>
+          <h3>Centros Médicos Autorizados</h3>
+          <p>Listado de centros médicos autorizados para los exámenes requeridos de licencias de conducir.</p>
+          <a href="escuela.de.conductores.html" class="btn">Más información</a>
+        </div>
+        
+        <div class="service-card animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="service-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3>Mesa de partes Virtual</h3>
+          <p>Toda la información necesaria para realizar tus trámites de manera rápida y sencilla.</p>
+          <a href="https://facilita.gob.pe/t/5585" class="btn">Acceder</a>
+        </div>
+        
+        <div class="service-card animate__animated animate__fadeInUp">
+          <div class="service-icon">
+            <i class="fas fa-road"></i>
+          </div>
+          <h3>Sub dirección de Laboratorio de Suelos</h3>
+          <p>Brindamos servicios especializados en análisis de suelos que contribuyen a la planificación, diseño y ejecución de obras de infraestructura.</p>
+          <a href="laboratorio.de.suelos.grtcloreto.html" class="btn">Más información</a>
+        </div>
+        
+        <div class="service-card animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="service-icon">
+            <i class="fas fa-ship"></i>
+          </div>
+          <h3>Transporte Acuático</h3>
+          <p>Regulación y supervisión del transporte fluvial en la región Loreto.</p>
+          <a href="direccion.ejecutiva.de.transportes.acuatico.grtcloreto.html" class="btn">Más información</a>
+        </div>
+        
+        <div class="service-card animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="service-icon">
+            <i class="fas fa-car"></i>
+          </div>
+          <h3>Circulación Terrestre y licencias de conducir</h3>
+          <p>Requisitos de licencias de conducir y permisos.</p>
+          <a href="requisitos.de.licencia.de.conducir.grtcloreto.html" class="btn">Más información</a>
+        </div>
+        
+        <div class="service-card animate__animated animate__fadeInUp animate__delay-3s">
+          <div class="service-icon">
+            <i class="fas fa-broadcast-tower"></i>
+          </div>
+          <h3>Servicios de conectividad y telecomunicaciones</h3>
+          <p>Aquí podrás gestionar tu solicitud de servicios de conectividad y telecomunicaciones a través de la Dirección Ejecutiva de Comunicaciones de la GRTC Loreto.</p>
+          
+          <!-- Botón de descarga -->
+          <a href="https://drive.google.com/uc?export=download&id=1l7qXU0qVPEoK3t_PoZLaqzYneiAA1VtF" 
+             class="btn btn-outline-primary" 
+             style="margin-bottom: 10px;" 
+             target="_blank">
+            Descargar formato de solicitud
+          </a>
+
+          <!-- Botón principal -->
+          <a href="direccion.ejecutiva.de.comunicaciones.grtcloreto.html" 
+             class="btn btn-primary animate-pulse">
+            Acceder
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Noticias premium -->
+  <section class="news">
+    <div class="container">
+      <div class="btn-wrapper">
+        <a href="https://www.facebook.com/share/1KvDfa2hej/?mibextid=wwXIfr" 
+           class="btn" 
+           target="_blank" 
+           rel="noopener noreferrer">
+           <i class="fab fa-facebook-f"></i> Ver últimas noticias
+        </a>
+      </div>
+
+      <h2 class="section-title animate__animated animate__fadeIn">Últimas Noticias</h2>
+      
+      <div class="news-grid">
+        <!-- Noticia 1 -->
+        <div class="news-card animate__animated animate__fadeIn">
+          <img src="https://i.postimg.cc/1zCX9jvP/foto-principal.jpg" alt="Seminario de capacitación" class="news-img">
+          <div class="news-content">
+            <span class="news-date">25 de Abril, 2025</span>
+            <h3>GRTC_LORETO realizó seminario de capacitación a conductores interprovinciales</h3>
+            <p>Con el objetivo de promover una conducción más segura y responsable, la GRTC organizó un seminario dirigido a los conductores que a diario recorren las rutas interprovinciales...</p>
+            <a href="direccion.ejecutiva.de.circulacion.terrestre.grtcloreto.html" class="btn">Leer más</a>
+          </div>
+        </div>
+        
+        <!-- Noticia 2 -->
+        <div class="news-card animate__animated animate__fadeIn animate__delay-1s">
+          <img src="https://i.postimg.cc/50yb950C/bacheo.jpg" alt="Trabajos de bacheo" class="news-img">
+          <div class="news-content">
+            <span class="news-date">28 de Abril, 2025</span>
+            <h3>Inician trabajos de bacheo en la carretera Iquitos-Nauta</h3>
+            <p>La Gerencia Regional de Transportes y Comunicaciones se reunió con los trabajadores encargados del bacheo para coordinar de manera más eficiente los trabajos de mejora...</p>
+            <a href="direccion.ejecutiva.de.infraestructura.vial.grtcloreto.html" class="btn">Leer más</a>
+          </div>
+        </div>
+        
+        <!-- Noticia 3 -->
+        <div class="news-card animate__animated animate__fadeIn animate__delay-2s">
+          <img src="https://i.postimg.cc/XvQxcdgx/providencia.jpg" alt="Conectividad en Providencia" class="news-img">
+          <div class="news-content">
+            <span class="news-date">23 de Abril, 2025</span>
+            <h3>Avances en conectividad para el poblado indígena Providencia</h3>
+            <p>La GRTC recibió la visita de representantes de la comunidad nativa Achuar de Providencia del río Corrientes, quienes manifestaron el deseo de contar con servicio de telefonía móvil...</p>
+            <a href="direccion.ejecutiva.de.comunicaciones.grtcloreto.html" class="btn">Leer más</a>
+          </div>
+        </div>
+        
+        <!-- Noticia 4 -->
+        <div class="news-card animate__animated animate__fadeIn">
+          <img src="https://i.postimg.cc/L83yjcJD/Grtc-loreto-DETA.jpg" alt="Grtc-loreto-DETA" class="news-img">
+          <div class="news-content">
+            <span class="news-date">23 de Abril, 2025</span>
+            <h3>Autoridades de Loreto coordinan medidas de seguridad fluvial ante creciente de ríos</h3>
+            <p>La Dirección Ejecutiva de Transporte Acuático de Loreto se reunió con autoridades como la Capitanía de Puertos y la Autoridad Portuaria Nacional para implementar medidas de seguridad ante la creciente de los ríos...</p>
+            <a href="direccion.ejecutiva.de.transportes.acuatico.grtcloreto.html" class="btn">Leer más</a>
+          </div>
+        </div>
+        
+        <!-- Noticia 5 -->
+        <div class="news-card animate__animated animate__fadeIn animate__delay-1s">
+          <img src="https://i.postimg.cc/wTYxvGnF/500202174-703829212588784-6088122872558945707-n.jpg" alt="Conectividad en Ñuñoa" class="news-img">
+          <div class="news-content">
+            <span class="news-date">23 de Abril, 2025</span>
+            <h3>La gerencia regional de transportes y comunicaciones participa en operativo multisectorial</h3>
+            <p>Con el objetivo de controlar, fiscalizar y formalizar las embarcaciones que navegan por los ríos de la región, el o Regional de Loreto, a través de la Gerencia Regional de Transportes y Comunicaciones...</p>
+            <a href="direccion.ejecutiva.de.transportes.acuatico.grtcloreto.html" class="btn">Leer más</a>
+          </div>
+        </div>
+        
+        <!-- Noticia 6 -->
+        <div class="news-card animate__animated animate__fadeIn animate__delay-2s">
+          <img src="https://i.postimg.cc/TYThdPyC/498606203-699449459693426-5224829277814753393-n.jpg" alt="Conectividad en otra comuna" class="news-img">
+          <div class="news-content">
+            <span class="news-date">23 de Abril, 2025</span>
+            <h3>Gerencia regional de transportes y comunicaciones realizó taller informativo</h3>
+            <p>La Gerencia Regional de Transportes y Comunicaciones, a través de la Dirección Ejecutiva de Comunicaciones, llevó a cabo un taller informativo en conmemoración del Día Internacional de las Telecomunicaciones...</p>
+            <a href="direccion.ejecutiva.de.comunicaciones.grtcloreto.html" class="btn">Leer más</a>
+          </div>
+        </div>
+        
+        <!-- Noticia 7 -->
+        <div class="news-card animate__animated animate__fadeIn animate__delay-2s"> 
+          <img src="https://i.postimg.cc/tJ2J0pmL/julio-1.jpg" alt="Coordinación de aeródromos" class="news-img">
+          <div class="news-content">
+            <span class="news-date">09 de Julio, 2025</span>
+            <h3>COORDINAMOS ACCIONES PARA MEJORAR AERÓDROMOS DE FRONTERA EN LA REGIÓN</h3>
+            <p>Como parte de las gestiones para fortalecer la conectividad aérea y mejorar la infraestructura de transporte en zonas alejadas, el Gobierno Regional de Loreto, a través de la Gerencia Regional de Transportes y Comunicaciones (GRTC), sostuvo una reunión de trabajo con el mando del Grupo Aéreo N.º 42 de la Fuerza Aérea del Perú (FAP)...</p>
+          </div>
+        </div>
+        
+        <!-- Noticia 8 -->
+        <div class="news-card animate__animated animate__fadeIn animate__delay-2s"> 
+          <img src="https://i.postimg.cc/d1qcbXZC/deta-mes-julio-1.jpg" alt="Detalle mes de julio" class="news-img">
+          <div class="news-content">
+            <span class="news-date">07 de Julio, 2025</span>
+            <h3>CONTINUAMOS CON EL TRABAJO ARTICULADO PARA REDUCIR LA INFORMALIDAD DEL TRANSPORTE FLUVIAL EN LA REGIÓN LORETO</h3>
+            <p>En el marco de la estrategia nacional para enfrentar la informalidad y mejorar la seguridad del transporte en la Amazonía peruana, el Gobierno Regional de Loreto, a través de la Gerencia Regional de Transportes y Comunicaciones (GRTC), sostuvo una reunión de coordinación con representantes del Ministerio de Transportes y Comunicaciones (MTC)...</p>
+            <a href="direccion.ejecutiva.de.transportes.acuatico.grtcloreto.html" class="btn">Leer más</a>
+          </div>
+        </div>
+        
+        <!-- Noticia 9 -->
+        <div class="news-card animate__animated animate__fadeIn animate__delay-2s">
+          <img src="https://i.postimg.cc/j24XGgND/deta-julio-2.jpg" alt="Detalle julio parte 2" class="news-img">
+          <div class="news-content">
+            <span class="news-date">09 de Julio, 2025</span>
+            <h3>CONTINÚA LA FORMALIZACIÓN DE EMBARCACIONES EN NUESTRA CIUDAD</h3>
+            <p>Como parte de las acciones para reducir la informalidad en el transporte fluvial y garantizar condiciones seguras para los pasajeros, el Gobierno Regional de Loreto, a través de la Gerencia Regional de Transportes y Comunicaciones (Grtc), ejecutó dos operativos de fiscalización en la ciudad...</p>
+            <a href="direccion.ejecutiva.de.transportes.acuatico.grtcloreto.html" class="btn">Leer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos premium -->
+  <section class="mis-videos">
+    <div class="container">
+      <h2 class="section-title animate__animated animate__fadeIn">Videos Institucionales</h2>
+      
+      <div class="fila-videos"> 
+        <!-- Video 1 -->
+        <div class="video-box animate__animated animate__fadeInLeft" data-video-id="qJa4C_tecus">
+          <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/qJa4C_tecus/hqdefault.jpg" alt="Video 1">
+            <div class="play-button"></div>
+          </div>
+        </div>
+        
+        <!-- Video 2 -->
+        <div class="video-box animate__animated animate__fadeInUp" data-video-id="Tx3Yhyghu5k">
+          <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/Tx3Yhyghu5k/hqdefault.jpg" alt="Video 2">
+            <div class="play-button"></div>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-box animate__animated animate__fadeInRight" data-video-id="5vz9CSQ3YRE">
+          <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/5vz9CSQ3YRE/hqdefault.jpg" alt="Video 3">
+            <div class="play-button"></div>
+          </div>
+        </div>
+
+        <div class="btn-wrapper">
+          <a href="https://www.facebook.com/profile.php?id=100088851354449&sk=videos" 
+             class="btn" 
+             target="_blank" 
+             rel="noopener noreferrer">
+             <i class="fab fa-facebook-f"></i> Ver más videos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer premium -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col animate__animated animate__fadeIn">
+          <img src="https://i.postimg.cc/prTd5bLq/logos-nuevo-2.png" alt="GRTC Loreto" style="max-height: 100px; margin-bottom: 20px;">
+          <p>Gerencia Regional de Transportes y Comunicaciones de Loreto - Promoviendo el desarrollo de la infraestructura vial y los sistemas de transporte y comunicaciones en la región.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1KvDfa2hej/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col animate__animated animate__fadeIn animate__delay-1s">
+          <h3>Contacto</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-envelope"></i> <a href="mailto:drtc@regionloreto.gob.pe">drtc@regionloreto.gob.pe</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:mesapartesdrtc@regionloreto.gob.pe">mesapartesdrtc@regionloreto.gob.pe</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps?q=Av.+José+Abelardo+Quiñones+KM+3.5,+San+Juan,+Loreto,+Perú" target="_blank">Av. José Abelardo Quiñones KM 3.5 San Juan</a></li>
+            <li><i class="fas fa-clock"></i> Atenciones al Publico L-V 7:00am - 3:00pm</li>
+            <li><i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/share/1KvDfa2hej/?mibextid=wwXIfr" target="_blank">Facebook oficial</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col animate__animated animate__fadeIn animate__delay-2s">
+          <h3>Enlaces rápidos</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-laptop"></i> <a href="https://www.regionloreto.gob.pe/tramites-en-linea" target="_blank">Trámites en Línea</a></li>
+            <li><i class="fas fa-car-crash"></i> <a href="https://scppp.mtc.gob.pe/" target="_blank">Consulta de Multas de Vehículos</a></li>
+            <li><i class="fas fa-file-download"></i> <a href="https://www.regionloreto.gob.pe/formularios" target="_blank">Descarga de Formularios</a></li>
+            <li><i class="fas fa-question-circle"></i> <a href="#">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col animate__animated animate__fadeIn animate__delay-3s">
+          <h3>Enlaces institucionales</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-eye"></i> <a href="https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=18822#.Y_fJdnbMK71" target="_blank">Portal de Transparencia</a></li>
+            <li><i class="fas fa-landmark"></i> <a href="https://www.regionloreto.gob.pe" target="_blank">Gobierno Regional de Loreto</a></li>
+            <li><i class="fas fa-satellite-dish"></i> <a href="https://www.gob.pe/mtc" target="_blank">Ministerio de transportes MTC</a></li>
+            <li><i class="fas fa-stamp"></i> <a href="https://www.sunarp.gob.pe" target="_blank">SUNARP</a></li>
+            <li><i class="fas fa-road"></i> <a href="https://www.sutran.gob.pe" target="_blank">SUTRAN</a></li>
+            <li><i class="fas fa-signal"></i> <a href="https://www.osiptel.gob.pe" target="_blank">OSIPTEL</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright animate__animated animate__fadeIn animate__delay-4s">
+        <p>&copy; 2025 Gerencia Regional de Transportes y comunicaciones de loreto - GRTC. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // Script para cambiar el título cuando el usuario cambia de pestaña
+    const originalTitle = document.title;
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        document.title = "¡Vuelve pronto! 👋";
+      } else {
+        document.title = "Gracias por volver 😊";
+        setTimeout(() => {
+          document.title = originalTitle;
+        }, 3000); // después de 3 segundos vuelve al título original
+      }
+    });
+
+    // Menú móvil
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navContainer = document.getElementById('navContainer');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+      navContainer.classList.toggle('active');
+      this.querySelector('i').classList.toggle('fa-bars');
+      this.querySelector('i').classList.toggle('fa-times');
+    });
+    
+    // Dropdowns para móvil
+    const dropdownButtons = document.querySelectorAll('.dropdown-container > .nav-button');
+    
+    dropdownButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle('active');
+          
+          // Cerrar otros dropdowns abiertos
+          document.querySelectorAll('.dropdown-container').forEach(otherDropdown => {
+            if (otherDropdown !== parent && otherDropdown.classList.contains('active')) {
+              otherDropdown.classList.remove('active');
+            }
+          });
+        }
+      });
+    });
+    
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('.dropdown-content a').forEach(link => {
+      link.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+          navContainer.classList.remove('active');
+          mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+          mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+        }
+      });
+    });
+    
+    // Cerrar menú al hacer clic fuera (solo desktop)
+    document.addEventListener('click', function(e) {
+      if (window.innerWidth > 768) {
+        // Cerrar todos los dropdowns excepto el que se hizo clic
+        document.querySelectorAll('.dropdown-container').forEach(dropdown => {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('active');
+          }
+        });
+      }
+    });
+    
+    // Slider automático
+    const images = document.querySelectorAll('#slider img');
+    let current = 0;
+    
+    function nextSlide() {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }
+    
+    setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+    
+    // Efecto de partículas interactivo
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": ["#003087", "#f70808", "#ffcc00"]
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.2,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 0.5
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+    
+    // Animación al hacer scroll
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.animate__animated');
+      
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (elementPosition < screenPosition) {
+          const animation = element.getAttribute('class').split('animate__')[1];
+          element.classList.add('animate__' + animation);
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+
+    // Reproductor de videos
+    document.querySelectorAll('.video-box').forEach(box => {
+      box.addEventListener('click', () => {
+        const videoId = box.getAttribute('data-video-id');
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        iframe.title = 'Video premium';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.frameBorder = 0;
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        box.innerHTML = ''; // limpiar portada
+        box.appendChild(iframe);
+      });
+    });
+  </script>
+</body>
+</html>

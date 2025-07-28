@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sub Dirección de laboratorio de suelos DEIV de la Gerencia regional de transportes y comunicaciones de loreto</title>
+  <meta name="description" content="Sitio oficial de la Gerencia Regional de Transportes y Comunicaciones de Loreto.">
+
+  <!-- Favicon y logo para Google -->
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/sQN8fzJ3/LOGO-WEB.png">
+  
+  <!-- Datos estructurados para Google -->
+  <script type="application/ld+json">
+    
+  
+  </script>
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="GRTC Loreto - Gerencia Regional de Transportes y Comunicaciones">
+  <meta property="og:description" content="Sitio oficial de la Gerencia Regional de Transportes y Comunicaciones de Loreto">
+  <meta property="og:image" content="https://i.postimg.cc/sQN8fzJ3/LOGO-WEB.png">
+  <meta property="og:url" content="https://grtcloreto.gob.pe">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GRTC Loreto">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GRTC Loreto - Gerencia Regional de Transportes y Comunicaciones">
+  <meta name="twitter:description" content="Sitio oficial de la Gerencia Regional de Transportes y Comunicaciones de Loreto">
+  <meta name="twitter:image" content="https://i.postimg.cc/sQN8fzJ3/LOGO-WEB.png">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    /* Estilos generales */
+    :root {
+      --primary: #003087;
+      --secondary: #e60000;
+      --accent: #ffcc00;
+      --light: #f5f5f5;
+      --dark: #222;
+      --text: #333;
+      --text-light: #777;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--light);
+      overflow-x: hidden;
+      position: relative;
+    }
+    
+    /* Fondo animado interactivo */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.1;
+      background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+      background-size: 300% 300%;
+      animation: gradientBG 15s ease infinite;
+    }
+    
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    /* Botones mejorados con efectos */
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: var(--secondary);
+      color: white;
+      border-radius: 50px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(230, 0, 0, 0.3);
+      transform: translateY(0);
+      margin: 5px;
+    }
+    
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .btn:hover {
+      background: #c50000;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(230, 0, 0, 0.4);
+    }
+    
+    .btn:hover::before {
+      left: 100%;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+      color: var(--primary);
+      font-size: 1.8rem; /* Reducido para móviles */
+      font-weight: 700;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+    
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #002366 100%);
+      padding: 15px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 1000;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Reducido para móviles */
+      flex: 1;
+      min-width: auto; /* Ajustado para móviles */
+    }
+    
+    .logo-img {
+      height: 60px; /* Reducido para móviles */
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .logo-text {
+      color: white;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.2rem; /* Reducido para móviles */
+      margin-bottom: 5px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .logo-text p {
+      font-size: 0.8rem; /* Reducido para móviles */
+      opacity: 0.9;
+    }
+    
+    .partner-logos {
+      display: flex;
+      gap: 10px; /* Reducido para móviles */
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+      width: 100%; /* Para móviles */
+    }
+    
+    .partner-logo {
+      height: 35px; /* Reducido para móviles */
+      filter: brightness(0) invert(1);
+      opacity: 0.8;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    /* Menú de navegación premium - Versión móvil */
+    nav {
+      background: linear-gradient(to right, var(--secondary), #c50000);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      transition: all 0.4s ease;
+      max-height: 0;
+      overflow: hidden;
+    }
+    
+    .nav-container.active {
+      max-height: 500px;
+    }
+    
+    /* Menú móvil */
+    .menu-toggle {
+      display: flex;
+      align-items: center;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 10px 15px;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1001;
+      transition: all 0.3s;
+    }
+    
+    .menu-icon {
+      display: block;
+      width: 25px;
+      height: 20px;
+      position: relative;
+    }
+    
+    .menu-icon span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: white;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+    
+    .menu-icon span:nth-child(1) {
+      top: 0px;
+    }
+    
+    .menu-icon span:nth-child(2), .menu-icon span:nth-child(3) {
+      top: 8px;
+    }
+    
+    .menu-icon span:nth-child(4) {
+      top: 16px;
+    }
+    
+    .menu-toggle.active .menu-icon span:nth-child(1) {
+      top: 8px;
+      width: 0%;
+      left: 50%;
+    }
+    
+    .menu-toggle.active .menu-icon span:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    
+    .menu-toggle.active .menu-icon span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    
+    .menu-toggle.active .menu-icon span:nth-child(4) {
+      top: 8px;
+      width: 0%;
+      left: 50%;
+    }
+    
+    /* Opciones del menú */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      flex-direction: column;
+      width: 100%;
+      padding: 10px 0;
+      margin: 0;
+    }
+    
+    .nav-item {
+      position: relative;
+      width: 100%;
+    }
+    
+    .nav-link {
+      color: white;
+      padding: 12px 20px;
+      display: block;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-align: left;
+      transition: all 0.3s;
+      font-size: 0.95rem;
+    }
+    
+    /* Banner */
+    .banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Servicios */
+    .services {
+      padding: 40px 0;
+      background: white;
+      position: relative;
+    }
+    
+    .services p {
+      padding: 0 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    
+    /* Tabla de servicios - Versión móvil */
+    .cost-table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .table-wrapper {
+      min-width: 600px;
+    }
+    
+    .table-container {
+      width: 100%;
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .row, .header {
+      display: flex;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .header {
+      font-weight: bold;
+      background: var(--primary);
+      color: white;
+      border-radius: 4px 4px 0 0;
+    }
+    
+    .cell-num {
+      flex: 0 0 10%;
+      padding: 0 5px;
+    }
+    
+    .cell-desc {
+      flex: 1;
+      padding: 0 5px;
+    }
+    
+    .cell-price {
+      flex: 0 0 20%;
+      text-align: right;
+      padding: 0 5px;
+    }
+    
+    /* Secciones de la tabla */
+    .table-section {
+      font-weight: bold;
+      background: #f5f5f5;
+      padding: 8px;
+      margin-top: 15px;
+      border-left: 4px solid var(--secondary);
+    }
+    
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, var(--primary) 0%, #002366 100%);
+      color: white;
+      padding: 40px 0 20px;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .footer-col {
+      padding: 0 15px;
+    }
+    
+    .footer-col h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .footer-col h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--secondary);
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .footer-links li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--secondary);
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: all 0.3s;
+      display: inline-block;
+      padding: 3px 0;
+      font-size: 0.9rem;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+      transform: translateX(5px);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      transition: all 0.3s;
+    }
+    
+    .social-links a:hover {
+      background: var(--secondary);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #aaa;
+      font-size: 0.85rem;
+    }
+    
+    /* Media Queries para tablets */
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 2.2rem;
+      }
+      
+      .logo {
+        gap: 15px;
+      }
+      
+      .logo-img {
+        height: 70px;
+      }
+      
+      .logo-text h1 {
+        font-size: 1.5rem;
+      }
+      
+      .logo-text p {
+        font-size: 0.9rem;
+      }
+      
+      .partner-logos {
+        width: auto;
+        justify-content: flex-end;
+      }
+      
+      .partner-logo {
+        height: 45px;
+      }
+      
+      .menu-toggle {
+        display: none;
+      }
+      
+      .nav-container {
+        max-height: none;
+        overflow: visible;
+      }
+      
+      .nav-menu {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+      }
+      
+      .nav-item {
+        width: auto;
+      }
+      
+      .nav-link {
+        text-align: center;
+        padding: 15px 20px;
+      }
+      
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    /* Media Queries para pantallas grandes */
+    @media (min-width: 992px) {
+      .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      
+      .table-wrapper {
+        min-width: 800px;
+      }
+      
+      .cell-num {
+        flex: 0 0 8%;
+      }
+      
+      .cell-price {
+        flex: 0 0 15%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fondo animado interactivo -->
+  <div class="animated-bg"></div>
+  <div class="particles" id="particles-js"></div>
+  
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="https://i.postimg.cc/Gh0rYctW/LOGO-WEB-2025.png" alt="GRTC Loreto" class="logo-img">
+        <div class="logo-text">
+          <h1>DEIV-SUB DIRECCIÓN DE LABORATORIOS DE SUELOS</h1>
+          <p>GERENCIA REGIONAL DE TRANSPORTES Y COMUNICACIONES</p>
+        </div>
+      </div>
+      
+      <div class="partner-logos">
+        <a href="https://www.transparencia.gob.pe/" target="_blank">
+          <img src="https://i.postimg.cc/FFMjyNdd/logo-portal-pte.png" alt="Portal de Transparencia" class="partner-logo">
+        </a>
+        <a href="https://www.gob.pe" target="_blank">
+          <img src="https://i.postimg.cc/B6wC9FnM/logo-gobpe-blanco.png" alt="Gobierno del Perú" class="partner-logo">
+        </a>
+      </div>
+
+      <!-- Botón del menú móvil -->
+      <button class="menu-toggle" id="mobileMenuBtn">
+        <div class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span class="menu-text">Menú</span>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Navegación -->
+  <nav>    
+    <div class="container nav-container" id="navContainer">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="direccion.ejecutiva.de.infraestructura.vial.grtcloreto.html" class="nav-link">IR A LA PAGINA PRINCIPAL</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Servicios -->
+  <section class="services"> 
+    <div class="container">
+      <h2 class="section-title">Servicio y costos de laboratorio y suelos</h2>
+      <p>ENSAYOS DE SUELOS</p>
+
+      <div class="cost-table-container">
+        <div class="table-wrapper">
+          <div class="table-container">
+            <div class="header">
+              <div class="cell-num">Item</div>
+              <div class="cell-desc">Servicio</div>
+              <div class="cell-price">Precios</div>
+            </div>
+            
+            <div class="table-section">ENSAYOS DE SUELOS</div>
+            <div class="row"><div class="cell-num">1</div><div class="cell-desc">Pruebas de Compactación (Densidad de campo)</div><div class="cell-price">40.00</div></div>
+            <div class="row"><div class="cell-num">2</div><div class="cell-desc">Análisis Granulométrico por tamizado de arenas</div><div class="cell-price">40.00</div></div>
+            <div class="row"><div class="cell-num">3</div><div class="cell-desc">Análisis Granulométrico por tamizado de arcillas</div><div class="cell-price">40.00</div></div>
+            <div class="row"><div class="cell-num">4</div><div class="cell-desc">Análisis Granulométrico por tamizado de agregado grueso</div><div class="cell-price">50.00</div></div>
+            <div class="row"><div class="cell-num">5</div><div class="cell-desc">Ensayo de Límite de consistencia (líquido/plástico)</div><div class="cell-price">40.00</div></div>
+            <div class="row"><div class="cell-num">6</div><div class="cell-desc">Contenido de humedad natural</div><div class="cell-price">15.00</div></div>
+            <div class="row"><div class="cell-num">7</div><div class="cell-desc">Contenido de Humedad IN SITU Speddy</div><div class="cell-price">80.00</div></div>
+            <div class="row"><div class="cell-num">8</div><div class="cell-desc">Clasificaciones AASHTO y SUCS Unificado</div><div class="cell-price">40.00</div></div>
+            <div class="row"><div class="cell-num">9</div><div class="cell-desc">Ensayo de Proctor modificado</div><div class="cell-price">120.00</div></div>
+            <div class="row"><div class="cell-num">10</div><div class="cell-desc">Ensayo de C.B.R.</div><div class="cell-price">350.00</div></div>
+            <div class="row"><div class="cell-num">11</div><div class="cell-desc">Estudio de suelo para pavimentación (hasta 2 m)</div><div class="cell-price">1 200 x cuadra</div></div>
+            <div class="row"><div class="cell-num">12</div><div class="cell-desc">Estudio de suelo para alcantarilla (hasta 3 m)</div><div class="cell-price">2 000 x cuadra</div></div>
+            <div class="row"><div class="cell-num">13</div><div class="cell-desc">Ensayo de Corte Directo</div><div class="cell-price">400.00</div></div>
+            <div class="row"><div class="cell-num">14</div><div class="cell-desc">Excavación de calicata c/u (hasta 3 m)</div><div class="cell-price">100.00</div></div>
+            
+            <div class="table-section">ENSAYOS Y PRUEBAS PARA CONCRETO</div>
+            <div class="row"><div class="cell-num">15</div><div class="cell-desc">Diseño de mezcla (Mortero Portland)</div><div class="cell-price">450.00</div></div>
+            <div class="row"><div class="cell-num">16</div><div class="cell-desc">Rotura a compresión de testigos de concreto</div><div class="cell-price">15.00</div></div>
+            <div class="row"><div class="cell-num">17</div><div class="cell-desc">Muestreo de testigo en obra</div><div class="cell-price">50.00</div></div>
+            <div class="row"><div class="cell-num">18</div><div class="cell-desc">Control de asentamiento (Cono de Abrams)</div><div class="cell-price">10.00</div></div>
+            <div class="row"><div class="cell-num">19</div><div class="cell-desc">Pruebas de esclerómetro</div><div class="cell-price">30.00</div></div>
+            <div class="row"><div class="cell-num">20</div><div class="cell-desc">Cálculo del módulo de fineza de agregado</div><div class="cell-price">20.00</div></div>
+            <div class="row"><div class="cell-num">21</div><div class="cell-desc">Extracción de núcleo de concreto (D=4")</div><div class="cell-price">100.00</div></div>
+            
+            <div class="table-section">ENSAYOS Y PRUEBAS MESCLAS BITUMINOSAS</div>
+            <div class="row"><div class="cell-num">22</div><div class="cell-desc">Diseño de mezcla Mortero asfáltico</div><div class="cell-price">1 000.00</div></div>
+            <div class="row"><div class="cell-num">23</div><div class="cell-desc">Diseño de mezcla Concreto asfáltico</div><div class="cell-price">1 200.00</div></div>
+            <div class="row"><div class="cell-num">24</div><div class="cell-desc">Lavado de mezcla asfáltica (Centrífuga)</div><div class="cell-price">350.00</div></div>
+            <div class="row"><div class="cell-num">25</div><div class="cell-desc">Moldeo de probeta Marshall</div><div class="cell-price">100.00</div></div>
+            <div class="row"><div class="cell-num">26</div><div class="cell-desc">Peso unitario mezcla compactada</div><div class="cell-price">70.00</div></div>
+            <div class="row"><div class="cell-num">27</div><div class="cell-desc">Estabilidad y flujo (cada uno)</div><div class="cell-price">100.00</div></div>
+            <div class="row"><div class="cell-num">28</div><div class="cell-desc">Compactación de mezcla en obra</div><div class="cell-price">120.00</div></div>
+            
+            <div class="table-section">ENSAYOS Y PRUEBAS DE CALIDAD DE AGREGADOS</div>
+            <div class="row"><div class="cell-num">29</div><div class="cell-desc">Abrasión (máquina de los ángeles)</div><div class="cell-price">300.00</div></div>
+            <div class="row"><div class="cell-num">30</div><div class="cell-desc">Peso específico agregado grueso y absorción</div><div class="cell-price">60.00</div></div>
+            <div class="row"><div class="cell-num">31</div><div class="cell-desc">Peso específico agregado fino y absorción</div><div class="cell-price">50.00</div></div>
+            <div class="row"><div class="cell-num">32</div><div class="cell-desc">Peso unitario agregado grueso suelto/varillado</div><div class="cell-price">70.00</div></div>
+            <div class="row"><div class="cell-num">33</div><div class="cell-desc">Peso unitario agregado fino suelto/varillado</div><div class="cell-price">60.00</div></div>
+            
+            <div class="table-section">TARIFAS DE ENSAYOS ESPECIALES DE LABORATOTIO</div>
+            <div class="row"><div class="cell-num">34</div><div class="cell-desc">Estudio de suelo SPT hasta 18 m (c/u)</div><div class="cell-price">1 500.00</div></div>
+            <div class="row"><div class="cell-num">35</div><div class="cell-desc">Estudio de suelo DPL hasta 3 m (c/u)</div><div class="cell-price">500.00</div></div>
+            <div class="row"><div class="cell-num">36</div><div class="cell-desc">Extracción de núcleos de pavimento 4"</div><div class="cell-price">250.00</div></div>
+            <div class="row"><div class="cell-num">37</div><div class="cell-desc">Compactación bituminosa en obra</div><div class="cell-price">150.00</div></div>
+            <div class="row"><div class="cell-num">38</div><div class="cell-desc">Equivalente de arena y otros agregados</div><div class="cell-price">100.00</div></div>
+            <div class="row"><div class="cell-num">39</div><div class="cell-desc">Cálculo módulo de fineza de agregado</div><div class="cell-price">20.00</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="https://i.postimg.cc/prTd5bLq/logos-nuevo-2.png" alt="GRTC Loreto" style="max-height: 100px; margin-bottom: 20px;">
+          <p>Gerencia Regional de Transportes y Comunicaciones de Loreto - Promoviendo el desarrollo de la infraestructura vial y los sistemas de transporte y comunicaciones en la región.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1KvDfa2hej/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-envelope"></i> <a href="mailto:drtc@regionloreto.gob.pe">drtc@regionloreto.gob.pe</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:mesapartesdrtc@regionloreto.gob.pe">mesapartesdrtc@regionloreto.gob.pe</a></li>
+            <li><i class="fas fa-map-marker-alt"></i><a href="https://www.google.com/maps?q=Av.+José+Abelardo+Quiñones+KM+3.5,+San+Juan,+Loreto,+Perú" target="_blank">Av. José Abelardo Quiñones<br> KM 3.5 San Juan</a></li>
+            <li><i class="fas fa-clock"></i> Atenciones al Publico L-V 7:00am - 3:00pm</li>
+            <li><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/share/1KvDfa2hej/?mibextid=wwXIfr"target="_blank">Facebook oficial</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Enlaces rápidos</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-laptop"></i><a href="https://www.regionloreto.gob.pe/tramites-en-linea" target="_blank">Trámites en Línea</a></li>
+            <li><i class="fas fa-car-crash"></i><a href="https://scppp.mtc.gob.pe/" target="_blank">Consulta de Multas de Vehículos</a></li>
+            <li><i class="fas fa-file-download"></i><a href="https://www.regionloreto.gob.pe/formularios" target="_blank">Descarga de Formularios</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Enlaces institucionales</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-eye"></i><a href="https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=18822#.Y_fJdnbMK71" target="_blank">Portal de Transparencia</a></li>
+            <li><i class="fas fa-landmark"></i><a href="https://www.regionloreto.gob.pe" target="_blank">Gobierno Regional de Loreto</a></li>
+            <li><i class="fas fa-satellite-dish"></i><a href="https://www.gob.pe/mtc" target="_blank">Ministerio de transportes MTC</a></li>
+            <li><i class="fas fa-stamp"></i><a href="https://www.sunarp.gob.pe" target="_blank">SUNARP</a></li>
+            <li><i class="fas fa-road"></i><a href="https://www.sutran.gob.pe" target="_blank">SUTRAN</a></li>
+            <li><i class="fas fa-signal"></i> <a href="https://www.osiptel.gob.pe" target="_blank">OSIPTEL</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Gobierno Regional de Loreto - GRTC. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // Menú móvil
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navContainer = document.getElementById('navContainer');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+      this.classList.toggle('active');
+      navContainer.classList.toggle('active');
+    });
+    
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+          mobileMenuBtn.classList.remove('active');
+          navContainer.classList.remove('active');
+        }
+      });
+    });
+    
+    // Efecto de partículas (simplificado para móviles)
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 30, // Reducido para móviles
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": ["#003087", "#e60000", "#ffcc00"]
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.2,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": window.innerWidth > 768, // Solo en desktop
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 0.5
+            }
+          },
+          "push": {
+            "particles_nb": 4
+          }
+        }
+      },
+      "retina_detect": true
+    });
+
+
+    /*escrip para cambiar el titulo cuando abandona la pagina web*/
+
+     // Script para cambiar el título cuando el usuario cambia de pestaña
+    const originalTitle = document.title;
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        document.title = "¡Vuelve pronto! 👋";
+      } else {
+        document.title = "Gracias por volver 😊";
+        setTimeout(() => {
+          document.title = originalTitle;
+        }, 3000); // después de 3 segundos vuelve al título original
+      }
+    });
+
+    /*fin del escrip para cabiar el titulo cuando abandonan la pagina web*/
+  </script>
+</body>
+</html>

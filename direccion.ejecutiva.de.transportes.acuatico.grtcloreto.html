@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DETA Loreto - Transporte Acuático</title>
+  <meta name="description" content="Oficina de Transporte Acuático de Loreto. Información sobre permisos de operación, requisitos, costos de trámites y normativa fluvial regional.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/sQN8fzJ3/LOGO-WEB.png">
+  
+  <!-- Fuentes e iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <style>
+    :root {
+      --primary: #003087;
+      --secondary: #e60000;
+      --accent: #ffcc00;
+      --light: #f5f5f5;
+      --dark: #222;
+      --text: #333;
+      --text-light: #777;
+      --max-width: 1200px;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--light);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4 {
+      line-height: 1.2;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    h1 { font-size: clamp(1.8rem, 5vw, 2.5rem); }
+    h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+    h3 { font-size: clamp(1.3rem, 3vw, 1.75rem); }
+    
+    p {
+      margin-bottom: 1rem;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+    
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    a:hover {
+      color: var(--secondary);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .section {
+      padding: 3rem 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+    
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #002366 100%);
+      padding: 1rem 0;
+      box-shadow: var(--box-shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      position: relative;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      min-width: 250px;
+    }
+    
+    .logo-img {
+      height: 60px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .logo-img:hover {
+      transform: scale(1.05);
+    }
+    
+    .logo-text {
+      color: white;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      color: white;
+    }
+    
+    .logo-text p {
+      font-size: 0.8rem;
+      opacity: 0.9;
+      color: white;
+    }
+    
+    .partner-logos {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    
+    .partner-logo {
+      height: 35px;
+      filter: brightness(0) invert(1);
+      opacity: 0.8;
+      transition: var(--transition);
+    }
+    
+    .partner-logo:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    
+    /* Navegación */
+    nav {
+      background: linear-gradient(to right, var(--secondary), #c50000);
+      position: sticky;
+      top: 80px;
+      z-index: 999;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-item {
+      position: relative;
+    }
+    
+    .nav-link {
+      color: white;
+      padding: 1rem 1.5rem;
+      display: block;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
+    /* Menú móvil */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+      padding: 10px;
+      transition: all 0.3s;
+      z-index: 1001;
+    }
+
+    .mobile-menu-btn:hover {
+      transform: rotate(90deg);
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .nav-container {
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--secondary);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        z-index: 998;
+      }
+      
+      .nav-container.active {
+        max-height: 100vh;
+        padding: 1rem 0;
+      }
+      
+      .nav-menu {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .nav-item {
+        width: 100%;
+        text-align: center;
+      }
+      
+      .nav-link {
+        width: 100%;
+        padding: 15px 20px;
+      }
+    }
+    
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('https://i.postimg.cc/zGgt50s6/logo-portal-web.jpg') center/cover no-repeat;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 2rem 1rem;
+      position: relative;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .hero h1 {
+      color: white;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .hero p {
+      color: #eee;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+    
+    /* Botones */
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--secondary);
+      color: white;
+      border-radius: 50px;
+      font-weight: 600;
+      text-align: center;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      margin: 0.5rem;
+    }
+    
+    .btn:hover {
+      background: #c50000;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(230, 0, 0, 0.3);
+    }
+    
+    .btn-primary {
+      background: var(--primary);
+    }
+    
+    .btn-primary:hover {
+      background: #002366;
+      box-shadow: 0 5px 15px rgba(0, 48, 135, 0.3);
+    }
+
+    /* Botones de navegación */
+    .buttons-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    
+    .nav-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, var(--primary) 0%, #002366 100%);
+      color: white;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: var(--box-shadow);
+      text-align: center;
+      min-width: 200px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .nav-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      background: linear-gradient(135deg, #002366 0%, var(--primary) 100%);
+    }
+    
+    .nav-button i {
+      margin-right: 8px;
+      font-size: 1.1em;
+    }
+    
+    /* Colores específicos para cada botón */
+    .inicio-btn {
+      background: linear-gradient(135deg, var(--primary) 0%, #002366 100%);
+    }
+    
+    .trafico-btn {
+      background: linear-gradient(135deg, #006633 0%, #004d26 100%);
+    }
+    
+    .supervision-btn {
+      background: linear-gradient(135deg, #993366 0%, #80264d 100%);
+    }
+    
+    .tramites-btn {
+      background: linear-gradient(135deg, #cc6600 0%, #b35900 100%);
+    }
+    
+    .normativa-btn {
+      background: linear-gradient(135deg, #663399 0%, #4d2673 100%);
+    }
+    
+    .noticias-btn {
+      background: linear-gradient(135deg, var(--secondary) 0%, #cc0000 100%);
+    }
+    
+    @media (max-width: 600px) {
+      .buttons-container {
+        flex-direction: column;
+      }
+      
+      .nav-button {
+        width: 100%;
+      }
+    }
+    
+    /* Sección de trámites */
+    .tri-fold {
+      width: 100%;
+      margin: 2rem auto;
+    }
+    
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .panel {
+      flex: 1 1 300px;
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+    }
+    
+    .panel:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .panel h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    
+    th, td {
+      padding: 0.5rem;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+      font-weight: 600;
+    }
+    
+    /* Noticias */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .news-card {
+      background: white;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+    }
+    
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .news-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .news-content {
+      padding: 1.5rem;
+    }
+    
+    .news-date {
+      color: var(--secondary);
+      font-weight: 600;
+      font-size: 0.8rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, var(--primary) 0%, #002366 100%);
+      color: white;
+      padding: 3rem 0 1.5rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-col h3 {
+      color: white;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .footer-col h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--secondary);
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      background: var(--secondary);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #aaa;
+      font-size: 0.8rem;
+    }
+    
+    /* Botón flotante */
+    .floating-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background: var(--secondary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      transition: var(--transition);
+    }
+    
+    .floating-btn:hover {
+      transform: translateY(-5px) scale(1.1);
+      background: #c50000;
+    }
+    
+    /* Animaciones */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .logo {
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+      
+      .partner-logos {
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      nav {
+        position: static;
+      }
+      
+      .hero {
+        min-height: 250px;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .panel {
+        flex: 1 1 100%;
+      }
+      
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="https://i.postimg.cc/Gh0rYctW/LOGO-WEB-2025.png" alt="GRTC Loreto" class="logo-img">
+        <div class="logo-text">
+          <h1>DETA - Dirección Ejecutiva de Transporte Acuático</h1>
+          <p>GERENCIA REGIONAL DE TRANSPORTES Y COMUNICACIONES</p>
+        </div>
+      </div>
+
+      <!--<img src="https://i.postimg.cc/prTd5bLq/logos-nuevo-2.png" alt="Logo DETA" style="height: 60px;"> -->
+
+
+             <style>
+.mi-clase-css {
+  width: 120px;  /* Ajusta el ancho deseado */
+  height: auto;  /* Mantiene la proporción */
+}
+</style>
+      <img src="https://grtcloreto.gob.pe/imagenes/deta/logo deta.png" alt="Banner de Loreto" class="mi-clase-css">
+      
+      <div class="partner-logos">
+        <a href="https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=18822#.Y_fJdnbMK71" target="_blank" rel="noopener noreferrer">
+          <img src="https://i.postimg.cc/FFMjyNdd/logo-portal-pte.png" alt="Portal de Transparencia" class="partner-logo">
+        </a>
+        <a href="https://www.gob.pe/regionloreto-grtc" target="_blank" rel="noopener noreferrer">
+          <img src="https://i.postimg.cc/B6wC9FnM/logo-gobpe-blanco.png" alt="Gobierno del Perú" class="partner-logo">
+        </a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Navegación -->
+  <!--
+  <nav>    
+    <div class="container nav-container" id="navContainer">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a href="#trafico-fluvial" class="nav-link">Sub Dirección de Tráfico Fluvial</a></li>
+        <li class="nav-item"><a href="#supervision-control" class="nav-link">Sub Dirección de Supervisión y Control</a></li>
+        <li class="nav-item"><a href="#tramites" class="nav-link">Trámites</a></li>
+        <li class="nav-item"><a href="#normativa" class="nav-link">Normativa</a></li>
+        <li class="nav-item"><a href="#noticias" class="nav-link">Noticias</a></li>
+      </ul>
+    </div>
+  </nav>  
+
+    <section class="section">
+    <div class="container">
+      <div class="buttons-container">
+        <a href="#" class="nav-button inicio-btn">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        
+        <a href="#trafico-fluvial" class="nav-button trafico-btn">
+          <i class="fas fa-ship"></i> Sub Dirección de Tráfico Fluvial
+        </a>
+        
+        <a href="#supervision-control" class="nav-button supervision-btn">
+          <i class="fas fa-clipboard-check"></i> Sub Dirección de Supervisión y Control
+        </a>
+        
+        <a href="#tramites" class="nav-button tramites-btn">
+          <i class="fas fa-file-alt"></i> Trámites
+        </a>
+        
+        <a href="#normativa" class="nav-button normativa-btn">
+          <i class="fas fa-gavel"></i> Normativa
+        </a>
+        
+        <a href="#noticias" class="nav-button noticias-btn">
+          <i class="fas fa-newspaper"></i> Noticias
+        </a>
+      </div>
+    </div>
+  </section>  -->
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1 class="animate__animated animate__fadeInDown">Dirección Ejecutiva de Transporte Acuático</h1>
+      <p class="animate__animated animate__fadeIn animate__delay-1s">Regulación y control del transporte fluvial en la región Loreto</p>
+      <div class="animate__animated animate__fadeIn animate__delay-2s">
+        <a href="#tramites" class="btn btn-primary">Ver Trámites</a>
+        <a href="#requisitos" class="btn">Requisitos de Permiso de Operaciones</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botones de navegación -->
+  <section class="section">
+    <div class="container">
+      <div class="buttons-container">
+        <a href="index.html" class="nav-button inicio-btn">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        
+        <a href="#trafico-fluvial" class="nav-button trafico-btn">
+          <i class="fas fa-ship"></i> Sub Dirección de Tráfico Fluvial
+        </a>
+        
+        <a href="#supervision-control" class="nav-button supervision-btn">
+          <i class="fas fa-ship"></i> Sub Dirección de Supervisión y Control
+        </a>
+        
+        <a href="#tramites" class="nav-button tramites-btn">
+          <i class="fas fa-file-alt"></i> Trámites y Requisitos de permisos de Operaciones 
+        </a>
+        
+        <a href="#normativas legales" class="nav-button normativa-btn">
+          <i class="fas fa-gavel"></i> Normativa
+        </a>
+        
+        <a href="#ultimas noticias" class="nav-button noticias-btn">
+          <i class="fas fa-newspaper"></i> Noticias
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sección de información principal -->
+  <main id="main-content">
+    <section class="section" id="deta">
+      <div class="container">
+        <h2 class="section-title">Dirección Ejecutiva de Transporte Acuático (D.E.T.A)</h2>
+        <p>Es el órgano encargado de formular y ejecutar políticas públicas que regulen el transporte fluvial, las actividades y servicios portuarios, así como la operación de las empresas navieras nacionales.</p>
+        <p>Su finalidad es propiciar un entorno normativo y operativo que favorezca el desarrollo integral, la competitividad y el fortalecimiento económico del sector acuático.</p>
+        
+        <h3>Funciones Generales:</h3>
+        <ol>
+          <li>Desarrollar y administrar la infraestructura portuaria regional de acuerdo con las regulaciones técnico-normativas emitidas por el Ministerio de Transportes y Comunicaciones.</li>
+          <li>Autorizar la prestación de servicios de transporte acuático de ámbito regional y actividades complementarias.</li>
+          <li>Conducir y ejecutar programas regionales en servicios de transporte acuático.</li>
+          <li>Fiscalizar y controlar la prestación de servicios de transporte acuático de ámbito regional.</li>
+          <li>Ejercer las potestades sancionadoras por incumplimiento de las normas.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Sección de trámites -->
+    <section class="section" id="tramites">
+      <div class="container">
+        <h2 class="section-title">Trámites y Requisitos</h2>
+        <p>REQUISITOS Y COSTOS PARA EL PERMISO DE OPERACIÓN FLUVIALES</p>
+
+        <div class="tri-fold">
+          <div class="row">
+            <!-- Panel 1 -->
+            <div class="panel animate" style="animation-delay: 0.1s">
+              <h3>COSTO DE TRÁMITES ADMINISTRATIVOS</h3>
+              <table>
+                <tr><td>Permiso de Operación Mixto</td><td>S/. 50.30</td></tr>
+                <tr><td>Permiso de Operación Carga</td><td>S/. 50.30</td></tr>
+                <tr><td>Permiso de Operación Pasajeros</td><td>S/. 50.30</td></tr>
+                <tr><td>Permiso de Operación Apoyo Logístico Propio</td><td>S/. 48.70</td></tr>
+                <tr><td>Permiso de Operación Turístico</td><td>S/. 48.70</td></tr>
+                <tr><td>Permiso de Operación Apoyo Social</td><td>S/. 48.70</td></tr>
+                <tr><td>Renovación de Permiso de Operación</td><td>S/. 48.50</td></tr>
+                <tr><td>Incremento Flota</td><td>S/. 48.50</td></tr>
+                <tr><td>Sustitución</td><td>S/. 48.50</td></tr>
+                <tr><td>Certificado de Inscripción</td><td>S/. 41.00</td></tr>
+                <tr><td>Duplicado de Permiso de Operación</td><td>S/. 24.80</td></tr>
+                <tr><td>Duplicado de Certificado de Inscripción</td><td>S/. 20.50</td></tr>
+                <tr><td>Información Estadística de Pasajeros/Carga</td><td>S/. 15.00</td></tr>
+              </table>
+            </div>
+
+            <!-- Panel 2 -->
+            <div class="panel animate" style="animation-delay: 0.2s">
+              <h3>RECOMENDACIONES PARA UN VIAJE SEGURO</h3>
+              <ul>
+                <li>Chaleco salvavidas obligatorio para todos.</li>
+                <li>Tanque de gasolina aislado en motores fuera de borda.</li>
+                <li>Embarcaciones menores: cabina rígida, pasadizo central, sillas con respaldo, cortinas y equipaje.</li>
+                <li>Prohibido embarcar en estado de ebriedad o bajo sustancias.</li>
+                <li>No fumar a bordo.</li>
+                <li>No abastecer con pasajeros a bordo.</li>
+                <li>No transportar productos peligrosos o animales vivos.</li>
+                <li>No desamarrar sin motor encendido.</li>
+              </ul>
+            </div>
+
+            <!-- Panel 3 -->
+            <div class="panel animate" style="animation-delay: 0.3s">
+              <h3>UNIDAD IMPOSITIVA TRIBUTARIA</h3>
+              <p><strong>Valor 2025:</strong> S/. 5,350.00</p>
+              <h3>CUENTA G.R.T.C – LORETO</h3>
+              <p><strong>Banco de la Nación:</strong><br>Cuenta Corriente N° 521‑024593</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de requisitos -->
+    <section class="section" id="requisitos">
+      <div class="container">
+        <h2 class="section-title">Requisitos para Permiso de Operación</h2>
+        
+        <div class="panel animate">
+          <ul>
+            <li>Solicitud (Dirigida al Gerente Regional de Transportes y Comunicaciones - GRTC).</li>
+            <li>Relación de Naves (Jurídica).</li>
+            <li>Constitución de la Empresa (Jurídica).</li>
+            <li>Vigencia de Poder del Representante Legal (Jurídica).</li>
+            <li>Copia simple de DNI vigente (Persona Natural o del Representante Legal - Jurídica).</li>
+            <li>Ficha RUC (Activo y Habido) - Persona jurídica.</li>
+            <li>Copia de Certificado Nacional de Seguridad (más de 02 U.A.B).</li>
+            <li>Copia de Certificado de Matrícula (más de 02 U.A.B).</li>
+            <li>Copia de Licencia de Funcionamiento (Jurídica).</li>
+            <li>Copia legalizada del Contrato de Transferencia (si la embarcación no está a nombre del solicitante).</li>
+            <li>Copias de Pólizas de Seguros:
+              <ul>
+                <li>Accidentes Personales</li>
+                <li>Responsabilidad Civil contra Terceros (a nombre del solicitante)</li>
+              </ul>
+            </li>
+            <li>Comprobantes de Pago de las Primas al día.</li>
+            <li>Original y copia de Recibo de Pago por derecho de Trámite.</li>
+            <li>Certificado de Prestador de Servicios Turísticos (GERCETUR - Solo Turístico).</li>
+            <li>Opinión de SERNANP (si incluye áreas naturales protegidas - Solo Turístico).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de infracciones -->
+    <section class="section" id="infracciones">
+      <div class="container">
+        <h2 class="section-title">Infracciones y Sanciones</h2>
+        
+        <div class="table-responsive">
+          <table class="panel animate">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Acción</th>
+                <th>Menor de 10 U.A.B</th>
+                <th>Mayor de 10 U.A.B</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>MG.1</td><td>Servicio sin permiso vigente</td><td>Suspensión 15 días</td><td>0.50 a 1.00 UIT</td><td>10 UIT</td></tr>
+              <tr><td>MG.4</td><td>Sin póliza de seguros vigente</td><td>Reincidente: Cancelación</td><td>0.50 a 1.00 UIT</td><td>10 UIT</td></tr>
+              <tr><td>MG.10</td><td>Adulterar documentos</td><td>Denuncia Penal</td><td>0.50 a 1.00 UIT</td><td>10 UIT</td></tr>
+              <tr><td>L.2</td><td>No portar lista de pasajeros o carga</td><td>-</td><td>0.10%</td><td>2 UIT</td></tr>
+              <tr><td>L.5</td><td>No informar sobre transferencia</td><td>-</td><td>0.50%</td><td>2 UIT</td></tr>
+              <tr><td>L.7</td><td>Información irreal en manifiesto</td><td>-</td><td>0.50%</td><td>2 UIT</td></tr>
+              <tr><td>G.1</td><td>No brindar información a inspectores</td><td>Suspensión 5 días</td><td>0.10 a 0.50 UIT</td><td>1.00 a 2.00 UIT</td></tr>
+              <tr><td>G.9</td><td>Sin rampas para discapacitados</td><td>Suspensión 15 días</td><td>0.10 a 0.50 UIT</td><td>1.00 a 2.00 UIT</td></tr>
+              <tr><td>G.12</td><td>Sin Certificado de Inscripción</td><td>Suspensión 15 días</td><td>0.20 a 0.40 UIT</td><td>1.00 a 2.00 UIT</td></tr>
+              <tr><td>G.13</td><td>Transporte indebido en embarcaciones de pasajeros</td><td>Suspensión 15 días</td><td>0.50 a 2.00 UIT</td><td>1.00 a 2.00 UIT</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+        <section class="section" id="normativas legales">
+      <div class="container">
+        <h2 class="section-title">Normativas Legales</h2>
+
+
+     <section class="section">
+    <div class="container">
+      <div class="buttons-container">
+        <a href="#" class="nav-button inicio-btn">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Sección de Tráfico Fluvial -->
+    <section class="section" id="trafico-fluvial">
+      <div class="container">
+        <h2 class="section-title">Sub Dirección de Tráfico Fluvial</h2>
+
+          <!-- Botones de navegación -->
+ 
+
+
+
+        <p>Es el Órgano de apoyo de la Dirección Ejecutiva de Transporte Acuático, encargado de la atención de solicitudes de Certificados de inscripción, emisión de Permisos de Operación y capacitaciones a los transportistas para la prestación de Servicios de Transporte Fluvial de Pasajeros y Carga en el ámbito regional.</p>
+        <p>Asimismo, se encarga del procesamiento informático y estadístico de las actividades desarrolladas por los operadores, el servicio de transporte fluvial en sus diversas modalidades.</p>
+        
+        <h3>Actividades:</h3>
+        <ol>
+          <li>Formular, ejecutar y evaluar proyectos regionales en materia del Tráfico Fluvial, en coordinación con el Gobierno Regional y el Gobierno Central.</li>
+          <li>Proveer al administrado de mayor información y orientación respecto a la obtención de la documentación solicitada.</li>
+          <li>Gestionar la viabilidad del trámite de las solicitudes de Permiso de Operación y Certificado de Inscripción de los servicios de Transporte Fluvial.</li>
+          <li>Capacitar a los administrados, personal técnico y administrativo, en materia de los servicios de Transporte Fluvial.</li>
+          <li>Tener al día los registros de la base de datos, previo consolidado con los kardex, en el Sistema de Base de Datos de la Subdirección de Tráfico Fluvial.</li>
+        </ol>
+      </div>
+    </section>
+
+
+     <section class="section">
+    <div class="container">
+      <div class="buttons-container">
+        <a href="#" class="nav-button inicio-btn">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Sección de Supervisión y Control -->
+    <section class="section" id="supervision-control">
+      <div class="container">
+        <h2 class="section-title">Sub Dirección de Supervisión y Control</h2>
+        <p>Con el objetivo de supervisar, controlar y promover la formalización de las embarcaciones que navegan por los ríos de la región, la Dirección Ejecutiva de Transporte Acuático, a través de la SUB DIRECCIÓN DE SUPERVICIÓN Y CONTROL viene reactivando los operativos de inspección en diversos puertos y embarcaderos de nuestra ciudad.</p>
+        <p>Los puertos de San Pedro de Nanay, Puente Nanay, Padre Cocha, Masusa, Morochita 01 y Morochita 02 fueron seleccionados para que nuestros inspectores ingresen y realicen intervenciones a las embarcaciones, solicitando documentos como el certificado de inscripción, el permiso de operación, pólizas de seguros y verificando el uso obligatorio de chalecos salvavidas, entre otros requisitos.</p>
+        <p>Asimismo, se llevó a cabo una jornada de sensibilización y formalización dirigida a los propietarios de embarcaciones, exhortándolos a cumplir con las normas de seguridad, especialmente en lo referente al uso obligatorio de chalecos salvavidas y al respeto del límite de capacidad de cada nave para una navegación segura por nuestros ríos.</p>
+        <p>Estos operativos se realizarán de manera inopinada, con el fin de reforzar la seguridad de los usuarios que dependen de este medio de transporte fluvial.</p>
+      </div>
+    </section>
+
+
+     <!-- Noticias premium -->
+  <section class="news"id="ultimas noticias">
+    <div class="container">
+      <div class="btn-wrapper">
+        <a href="https://www.facebook.com/share/1KvDfa2hej/?mibextid=wwXIfr" 
+           class="btn" 
+           target="_blank" 
+           rel="noopener noreferrer">
+           <i class="fab fa-facebook-f"></i> Ver últimas noticias
+        </a>
+      </div>
+      
+    <!-- Sección de Noticias -->
+    <section class="section" id="noticias">
+      <div class="container">
+        <h2 class="section-title">Noticias y Actualizaciones</h2>
+        
+        <div class="news-grid">
+          <!-- Noticia 1 -->
+          <article class="news-card animate" style="animation-delay: 0.1s">
+            <img src="https://i.postimg.cc/J4MVjMwh/481811653-644223201882719-295452138837722242-n.jpg" alt="Reunión de trabajo" class="news-img" loading="lazy">
+            <div class="news-content">
+              <h3>DIRECCIÓN EJECUTIVA DE TRANSPORTE ACUÁTICO IMPULSAN POLÍTICAS PARA UN TRANSPORTE FLUVIAL SEGURO</h3>
+              <p>La Dirección Ejecutiva de Transporte Acuático lidera el desarrollo de políticas y acciones estratégicas orientadas al ordenamiento del transporte fluvial, la supervisión de empresas navieras, y la regulación de servicios portuarios y embarcaderos en el ámbito regional.</p>
+              <span class="news-date">25 de Abril, 2025</span>
+              <a href="#" class="btn">Leer más</a>
+            </div>
+          </article>
+          
+          <!-- Noticia 2 -->
+          <article class="news-card animate" style="animation-delay: 0.2s">
+            <img src="https://i.postimg.cc/Qd6v17s8/500202174-703829212588784-6088122872558945707-n.jpg" alt="Operativo de control" class="news-img" loading="lazy">
+            <div class="news-content">
+              <h3>SUPERVISIÓN Y CONTROL RETOMA OPERATIVOS PARA GARANTIZAR SEGURIDAD</h3>
+              <p>La Subdirección de Supervisión y Control ha reactivado los operativos de inspección en diversos puertos y embarcaderos de nuestra ciudad, con el objetivo de fortalecer la seguridad y el cumplimiento de la normativa vigente en el transporte fluvial.</p>
+              <span class="news-date">28 de Abril, 2025</span>
+              <a href="#" class="btn">Leer más</a>
+            </div>
+          </article>
+          
+          <!-- Noticia 3 -->
+          <article class="news-card animate" style="animation-delay: 0.3s">
+            <img src="https://i.postimg.cc/X71ggkZz/492446598-681495584822147-5766323760567170779-n.jpg" alt="Reunión con autoridades" class="news-img" loading="lazy">
+            <div class="news-content">
+              <h3>GRTC PARTICIPA EN REUNIÓN CON AUTORIDADES PORTUARIAS</h3>
+              <p>La Gerencia Regional de Transportes y Comunicaciones, a través de la Dirección Ejecutiva de Transporte Acuático, participó en una reunión con la Capitanía de Puertos, Autoridad Portuaria Nacional y la Asociación de Navieros, con la finalidad de trabajar de manera conjunta frente a la creciente de los ríos.</p>
+              <span class="news-date">23 de Abril, 2025</span>
+              <a href="#" class="btn">Leer más</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+   <section class="section">
+    <div class="container">
+      <div class="buttons-container">
+        <a href="#" class="nav-button inicio-btn">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="https://i.postimg.cc/prTd5bLq/logos-nuevo-2.png" alt="GRTC Loreto" style="max-height: 80px; margin-bottom: 15px;" loading="lazy">
+          <p>Gerencia Regional de Transportes y Comunicaciones de Loreto - Promoviendo el desarrollo de la infraestructura vial y los sistemas de transporte y comunicaciones en la región.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1KvDfa2hej/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-envelope"></i> <a href="mailto:drtc@regionloreto.gob.pe">drtc@regionloreto.gob.pe</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> Av. José Abelardo Quiñones KM 3.5 San Juan</li>
+            <li><i class="fas fa-clock"></i> Atención al Público L-V 7:00am - 3:00pm</li>
+            <li><i class="fas fa-phone"></i> (065) 25-XXXX</li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Enlaces rápidos</h3>
+          <ul class="footer-links">
+            <li><a href="#tramites">Trámites y Requisitos</a></li>
+            <li><a href="#infracciones">Infracciones y Sanciones</a></li>
+            <li><a href="#noticias">Noticias y Actualizaciones</a></li>
+            <li><a href="https://www.regionloreto.gob.pe/formularios" target="_blank" rel="noopener noreferrer">Formularios</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Enlaces institucionales</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.regionloreto.gob.pe" target="_blank" rel="noopener noreferrer">Gobierno Regional de Loreto</a></li>
+            <li><a href="https://www.gob.pe/mtc" target="_blank" rel="noopener noreferrer">Ministerio de Transportes</a></li>
+            <li><a href="https://www.sunarp.gob.pe" target="_blank" rel="noopener noreferrer">SUNARP</a></li>
+            <li><a href="https://www.sutran.gob.pe" target="_blank" rel="noopener noreferrer">SUTRAN</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Gobierno Regional de Loreto - GRTC. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Botón flotante -->
+  <a href="#tramites" class="floating-btn" aria-label="Ir a trámites">
+    <i class="fas fa-file-alt"></i>
+  </a>
+  
+  <!-- Scripts -->
+  <script>
+    // Menú móvil
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navContainer = document.getElementById('navContainer');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      // Función para alternar el menú
+      function toggleMenu() {
+        navContainer.classList.toggle('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        
+        if (navContainer.classList.contains('active')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      }
+      
+      // Evento para el botón del menú
+      if (mobileMenuBtn && navContainer) {
+        mobileMenuBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          toggleMenu();
+        });
+      }
+      
+      // Cerrar menú al hacer clic en un enlace (solo móvil)
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 768) {
+            toggleMenu();
+          }
+        });
+      });
+      
+      // Cerrar menú al hacer clic fuera de él
+      document.addEventListener('click', function(e) {
+        if (navContainer.classList.contains('active') && 
+            !navContainer.contains(e.target) && 
+            e.target !== mobileMenuBtn) {
+          toggleMenu();
+        }
+      });
+      
+      // Cerrar menú al hacer scroll (solo móvil)
+      window.addEventListener('scroll', function() {
+        if (window.innerWidth <= 768 && navContainer.classList.contains('active')) {
+          toggleMenu();
+        }
+      });
+      
+      // Animaciones al hacer scroll
+      const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.section, .panel, .news-card');
+        
+        elements.forEach(element => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const screenPosition = window.innerHeight / 1.3;
+          
+          if (elementPosition < screenPosition) {
+            element.classList.add('animate');
+          }
+        });
+      };
+      
+      window.addEventListener('scroll', animateOnScroll);
+      window.addEventListener('load', animateOnScroll);
+      
+      // Cambiar título cuando el usuario cambia de pestaña
+      const originalTitle = document.title;
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          document.title = "¡Vuelve pronto! 👋 - DETA Loreto";
+        } else {
+          document.title = "Gracias por volver 😊 - DETA Loreto";
+          setTimeout(() => {
+            document.title = originalTitle;
+          }, 3000);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
